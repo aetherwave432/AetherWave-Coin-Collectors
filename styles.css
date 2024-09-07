@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 15px;
+}
+javascript
+
+Copy
+// Sample JavaScript to fetch and display rare coin images
+const gallery = document.querySelector('.gallery');
+
+// Replace this with your own logic to fetch and display images
+const rareCoins = [
+  'coin1.jpg',
+  'coin2.jpg',
+  'coin3.jpg',
+  // Add more coin images here
+];
+
+// Dynamically create image elements for each rare coin
+rareCoins.forEach((coin) => {
+  const image = document.createElement('img');
+  image.src = coin;
+  image.alt = 'Rare Coin';
+  gallery.appendChild(image);
+});
